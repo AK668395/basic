@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>BASIC Apparel — Luxury Essentials</title>
+
+<!-- SEO -->
+<meta name="description" content="BASIC Apparel — premium, minimal, black & gold fashion essentials." />
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --black: #000000;
+    --black-deep: #0b0b0b;
+    --gold: #d4af37;
+    --gold-light: #f2d98d;
+    --white: #ffffff;
+    --muted: #c5c5c5;
+    --radius: 12px;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--black-deep);
+    color: var(--white);
+    line-height: 1.5;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+  /* HEADER */
+  .site-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0;
+  }
+
+  .logo {
+    width: 60px; height: 60px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; justify-content: center; align-items: center;
+    color: var(--black); font-family: "Playfair Display", serif;
+    font-size: 34px; font-weight: 700;
+  }
+
+  .brand-title { font-weight: 700; font-size: 20px; }
+
+  nav a { margin-left: 20px; color: var(--muted); font-weight: 600; }
+
+  .btn {
+    padding: 10px 16px; border-radius: var(--radius);
+    border: 1px solid var(--gold); color: var(--gold);
+    background: transparent; font-weight: 600; cursor: pointer;
+  }
+
+  .btn.cta {
+    background: var(--gold); color: var(--black);
+    border: none;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: 24px; border-radius: 18px;
+    overflow: hidden; position: relative; min-height: 60vh;
+    background-size: cover; background-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.75));
+    display: flex; align-items: center;
+    padding: 60px;
+  }
+
+  h1 {
+    font-size: 48px; margin: 0 0 14px 0;
+    font-family: "Playfair Display", serif;
+  }
+
+  .lead { max-width: 600px; color: var(--muted); margin-bottom: 20px; }
+
+  /* PRODUCT GRID */
+  .grid {
+    margin-top: 40px;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .product {
+    background: #0f0f0f;
+    border: 1px solid #111;
+    padding: 14px; border-radius: var(--radius);
+    transition: 0.25s ease;
+  }
+
+  .product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.65);
+    border-color: var(--gold);
+  }
+
+  .product img {
+    width: 100%; height: 260px; object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .price {
+    color: var(--gold); font-weight: 700;
+  }
+
+  .product-actions {
+    margin-top: 12px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  /* LOOKBOOK */
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px; margin-top: 12px;
+  }
+
+  .gallery-image {
+    width: 100%; height: 160px; border-radius: 8px;
+    object-fit: cover; cursor: pointer; transition: 0.2s ease;
+  }
+
+  .gallery-image:hover { transform: scale(1.03); border: 1px solid var(--gold); }
+
+  /* FOOTER */
+  footer { margin-top: 60px; color: var(--muted); font-size: 14px;
+    border-top: 1px solid #222; padding-top: 20px; }
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header class="site-header">
+  <div class="brand">
+    <div class="logo">B</div>
+    <div class="brand-title">BASIC Apparel</div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="btn cta">Shop Now</button>
+</header>
+
+<!-- HERO WITH IMAGE -->
+<section class="hero" style="
+  background-image:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&w=1800&q=80');
+">
+  <div class="hero-overlay">
+    <div>
+      <h1>Luxury Essentials in Black & Gold</h1>
+      <p class="lead">Minimal silhouettes. Premium fabrics. Built to elevate everyday style.</p>
+      <button class="btn cta">Explore Collection</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section id="shop">
+  <h2 style="margin-top:40px; font-family:'Playfair Display', serif;">Featured</h2>
+
+  <div class="grid">
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1520975912966-899b0c2a5f18?auto=format&w=1000&q=80" alt="">
+      <h4>Black Luxe Sweatshirt</h4>
+      <div class="price">$78</div>
+      <div class="product-actions">
+        <button class="btn">View</button>
+        <button class="btn cta">Add</button>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&w=1000&q=80" alt="">
+      <h4>Classic Black Tee</h4>
+      <div class="price">$32</div>
+      <div class="product-actions">
+        <button class="btn">View</button>
+        <button class="btn cta">Add</button>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1551029506-080360f826d4?auto=format&w=1000&q=80" alt="">
+      <h4>Lightweight Urban Jacket</h4>
+      <div class="price">$148</div>
+      <div class="product-actions">
+        <button class="btn">View</button>
+        <button class="btn cta">Add</button>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&w=1000&q=80" alt="">
+      <h4>Everyday Minimal Cap</h4>
+      <div class="price">$38</div>
+      <div class="product-actions">
+        <button class="btn">View</button>
+        <button class="btn cta">Add</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="margin-top:40px;">
+  <h2 style="font-family:'Playfair Display', serif;">Lookbook</h2>
+
+  <div class="gallery-grid">
+    <img class="gallery-image" src="https://images.unsplash.com/photo-1520975912966-899b0c2a5f18?auto=format&w=900&q=80">
+    <img class="gallery-image" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&w=900&q=80">
+    <img class="gallery-image" src="https://images.unsplash.com/photo-1519741493870-2b86a5d43b14?auto=format&w=900&q=80">
+    <img class="gallery-image" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&w=900&q=80">
+  </div>
+</section>
+
+<footer>
+  © 2025 BASIC Apparel — All rights reserved.
+</footer>
+
+</div>
+</body>
+</html>
